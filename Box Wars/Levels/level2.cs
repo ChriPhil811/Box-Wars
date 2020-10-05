@@ -23,6 +23,7 @@ namespace Box_Wars.Levels
 
         //hero key press variables
         Boolean wDown, aDown, sDown, dDown;
+        Boolean mute;
 
         //rectangle list for the level layout
         List<Rectangle> level1Collision = new List<Rectangle>();
