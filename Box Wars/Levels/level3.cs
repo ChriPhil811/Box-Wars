@@ -23,7 +23,8 @@ namespace Box_Wars.Levels
 
         //hero key press variables
         Boolean wDown, aDown, sDown, dDown;
-        Boolean mute;
+        Boolean mute = false;
+        Boolean fullscreen = false;
 
         //rectangle list for the level layout
         List<Rectangle> level1Collision = new List<Rectangle>();
@@ -156,6 +157,24 @@ namespace Box_Wars.Levels
                     break;
                 case Keys.D:
                     dDown = true;
+                    break;
+
+                //mute and fullscreen controls
+                case Keys.F:
+                    if (fullscreen == true)
+                    {
+                        Form f = this.FindForm();
+                        f.WindowState = FormWindowState.Normal;
+                        this.Location = new Point((f.Width - this.Width) / 2, (f.Height - this.Height) / 2); //center the screen
+                        fullscreen = false;
+                    }
+                    else
+                    {
+                        Form f = this.FindForm();
+                        f.WindowState = FormWindowState.Maximized;
+                        this.Location = new Point((f.Width - this.Width) / 2, (f.Height - this.Height) / 2); //center the screen
+                        fullscreen = true;
+                    }
                     break;
                 case Keys.M:
                     if (mute == true)
@@ -361,6 +380,8 @@ namespace Box_Wars.Levels
 
                     LevelFailedScreen lf = new LevelFailedScreen();
                     f.Controls.Add(lf);
+
+                    lf.Location = new Point((f.Width - lf.Width) / 2, (f.Height - lf.Height) / 2); //center the screen
                 }
             }
 
@@ -385,6 +406,8 @@ namespace Box_Wars.Levels
 
                     LevelFailedScreen lf = new LevelFailedScreen();
                     f.Controls.Add(lf);
+
+                    lf.Location = new Point((f.Width - lf.Width) / 2, (f.Height - lf.Height) / 2); //center the screen
                 }
             }
 
@@ -417,6 +440,8 @@ namespace Box_Wars.Levels
 
                 GameCompleteScreen gcs = new GameCompleteScreen();
                 f.Controls.Add(gcs);
+
+                gcs.Location = new Point((f.Width - gcs.Width) / 2, (f.Height - gcs.Height) / 2); //center the screen
             }
 
             #endregion hero collisions

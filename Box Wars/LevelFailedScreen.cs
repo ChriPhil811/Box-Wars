@@ -30,6 +30,8 @@ namespace Box_Wars
 
             Levels.Level_1 l1 = new Levels.Level_1();
             f.Controls.Add(l1);
+
+            l1.Location = new Point((f.Width - l1.Width) / 2, (f.Height - l1.Height) / 2); //center the screen
         }
 
         private void exitButton_Click(object sender, EventArgs e)

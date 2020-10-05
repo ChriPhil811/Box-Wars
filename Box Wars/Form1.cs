@@ -17,7 +17,6 @@ namespace Box_Wars
         public Shadow()
         {
             InitializeComponent();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -25,6 +24,7 @@ namespace Box_Wars
             //bring up the menu screen
             MenuScreen ms = new MenuScreen();
             this.Controls.Add(ms);
+            ms.Location = new Point((this.Width - ms.Width) / 2, (this.Height - ms.Height) / 2); //center the menu screen
         }
     }
 }

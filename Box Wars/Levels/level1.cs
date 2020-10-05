@@ -21,9 +21,9 @@ namespace Box_Wars.Levels
         SoundPlayer levelCompleteSound = new SoundPlayer(Properties.Resources.level_complete);
         SoundPlayer heroFootsteps = new SoundPlayer(Properties.Resources.footsteps);
 
-        //hero key press variables
-        Boolean wDown, aDown, sDown, dDown;
-        Boolean mute = false;
+        Boolean wDown, aDown, sDown, dDown; //hero key press variables
+        Boolean mute = false; //boolean for mute
+        Boolean fullscreen = false; //boolean for fullscreen 
 
         //rectangle list for the level layout
         List<Rectangle> level1Collision = new List<Rectangle>();
@@ -109,8 +109,26 @@ namespace Box_Wars.Levels
                 case Keys.D:
                     dDown = true;
                     break;
+
+                //mute and fullscreen controls
+                case Keys.F:
+                    if (fullscreen == true)
+                    {
+                        Form f = this.FindForm();
+                        f.WindowState = FormWindowState.Normal;
+                        this.Location = new Point((f.Width - this.Width) / 2, (f.Height - this.Height) / 2); //center the screen
+                        fullscreen = false;
+                    }
+                    else
+                    {
+                        Form f = this.FindForm();
+                        f.WindowState = FormWindowState.Maximized;
+                        this.Location = new Point((f.Width - this.Width) / 2, (f.Height - this.Height) / 2); //center the screen
+                        fullscreen = true;
+                    }
+                    break;
                 case Keys.M:
-                    if(mute == true)
+                    if (mute == true)
                     {
                         Shadow.gameVolume = 100;
                         mute = false;
@@ -236,6 +254,8 @@ namespace Box_Wars.Levels
 
                     LevelFailedScreen lf = new LevelFailedScreen();
                     f.Controls.Add(lf);
+
+                    lf.Location = new Point((f.Width - lf.Width) / 2, (f.Height - lf.Height) / 2); //center the screen
                 }
             }
 
@@ -255,6 +275,7 @@ namespace Box_Wars.Levels
                 level2 l2 = new level2();
                 f.Controls.Add(l2);
 
+                l2.Location = new Point((f.Width - l2.Width) / 2, (f.Height - l2.Height) / 2); //center the screen
                 l2.Focus();
             }
 

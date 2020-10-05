@@ -18,7 +18,7 @@ namespace Box_Wars
         public MenuScreen()
         {
             InitializeComponent();
-            menuMusic.URL = "Shadow - Menu Theme.wav"; //set the file to play to the menu theme (put file in project_name/project_name/bin/debug)
+            menuMusic.URL = "Shadow - Menu Theme.wav"; //set the file to play to the menu theme (put file in project_name/project_name/bin/debug) 
         }
 
         private void newGameButton_Click(object sender, EventArgs e)
@@ -32,6 +32,7 @@ namespace Box_Wars
             Levels.Level_1 l1 = new Levels.Level_1();
             f.Controls.Add(l1);
 
+            l1.Location = new Point((f.Width - l1.Width) / 2, (f.Height - l1.Height) / 2); //center the level 1 screen
             l1.Focus();
         }
 
@@ -45,6 +46,8 @@ namespace Box_Wars
 
             controlScreen cs = new controlScreen();
             f.Controls.Add(cs);
+
+            cs.Location = new Point((f.Width - cs.Width) / 2, (f.Height - cs.Height) / 2); //center the level 1 screen
         }
 
         private void exitButton_Click(object sender, EventArgs e)

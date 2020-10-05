@@ -28,6 +28,8 @@ namespace Box_Wars
 
             MenuScreen ms = new MenuScreen();
             f.Controls.Add(ms);
+
+            ms.Location = new Point((f.Width - ms.Width) / 2, (f.Height - ms.Height) / 2); //center the screen
         }
 
         private void exitButton_Click(object sender, EventArgs e)
