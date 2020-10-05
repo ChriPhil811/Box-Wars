@@ -35,6 +35,7 @@
             this.tip5Label = new System.Windows.Forms.Label();
             this.menuButton = new System.Windows.Forms.Button();
             this.tip1Label = new System.Windows.Forms.Label();
+            this.controlsLabel2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // controlsLabel
@@ -114,10 +115,22 @@
             this.tip1Label.TabIndex = 1;
             this.tip1Label.Text = "Avoid being seen by the enemies; their sight range is light yellow.";
             // 
+            // controlsLabel2
+            // 
+            this.controlsLabel2.AutoSize = true;
+            this.controlsLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlsLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.controlsLabel2.Location = new System.Drawing.Point(355, 48);
+            this.controlsLabel2.Name = "controlsLabel2";
+            this.controlsLabel2.Size = new System.Drawing.Size(425, 37);
+            this.controlsLabel2.TabIndex = 7;
+            this.controlsLabel2.Text = "Press M to mute the game.";
+            // 
             // controlScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.controlsLabel2);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.tip5Label);
             this.Controls.Add(this.tip4Label);
@@ -141,5 +154,6 @@
         private System.Windows.Forms.Label tip5Label;
         private System.Windows.Forms.Button menuButton;
         private System.Windows.Forms.Label tip1Label;
+        private System.Windows.Forms.Label controlsLabel2;
     }
 }

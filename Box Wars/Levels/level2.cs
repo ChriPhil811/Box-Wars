@@ -130,6 +130,18 @@ namespace Box_Wars.Levels
                 case Keys.D:
                     dDown = true;
                     break;
+                case Keys.M:
+                    if (mute == true)
+                    {
+                        gameMusic.settings.volume = 100;
+                        mute = false;
+                    }
+                    else
+                    {
+                        gameMusic.settings.volume = 0;
+                        mute = true;
+                    }
+                    break;
             }
         }
 

@@ -23,6 +23,7 @@ namespace Box_Wars.Levels
 
         //hero key press variables
         Boolean wDown, aDown, sDown, dDown;
+        Boolean mute = false;
 
         //rectangle list for the level layout
         List<Rectangle> level1Collision = new List<Rectangle>();
@@ -108,6 +109,18 @@ namespace Box_Wars.Levels
                 case Keys.D:
                     dDown = true;
                     break;
+                case Keys.M:
+                    if(mute == true)
+                    {
+                        gameMusic.settings.volume = 100;
+                        mute = false;
+                    }
+                    else
+                    {
+                        gameMusic.settings.volume = 0;
+                        mute = true;
+                    }
+                    break;
             }
         }
 
@@ -137,7 +150,6 @@ namespace Box_Wars.Levels
 
         private void gameLoop_Tick(object sender, EventArgs e)
         {
-            gameMusic.controls.play(); //play the game music on repeat
 
             //hero movement
             if (dDown == true && hero.x < this.Width - hero.size)
