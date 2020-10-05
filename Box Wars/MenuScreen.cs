@@ -31,6 +31,8 @@ namespace Box_Wars
 
             Levels.Level_1 l1 = new Levels.Level_1();
             f.Controls.Add(l1);
+
+            l1.Focus();
         }
 
         private void controlsButton_Click(object sender, EventArgs e)

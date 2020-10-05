@@ -112,12 +112,12 @@ namespace Box_Wars.Levels
                 case Keys.M:
                     if(mute == true)
                     {
-                        gameMusic.settings.volume = 100;
+                        Shadow.gameVolume = 100;
                         mute = false;
                     }
                     else
                     {
-                        gameMusic.settings.volume = 0;
+                        Shadow.gameVolume = 0;
                         mute = true;
                     }
                     break;
@@ -150,6 +150,8 @@ namespace Box_Wars.Levels
 
         private void gameLoop_Tick(object sender, EventArgs e)
         {
+            gameMusic.controls.play(); //play game music on loop
+            gameMusic.settings.volume = Shadow.gameVolume; //update game volume
 
             //hero movement
             if (dDown == true && hero.x < this.Width - hero.size)
@@ -252,6 +254,8 @@ namespace Box_Wars.Levels
 
                 level2 l2 = new level2();
                 f.Controls.Add(l2);
+
+                l2.Focus();
             }
 
             #endregion hero collisions
