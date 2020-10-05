@@ -13,7 +13,7 @@ namespace Box_Wars
 {
     public partial class GameCompleteScreen : UserControl
     {
-        public WindowsMediaPlayer winMusic = new WindowsMediaPlayer(); //make a new music player
+        public WindowsMediaPlayer winMusic = new WindowsMediaPlayer(); //make a new music player test
 
         public GameCompleteScreen()
         {
