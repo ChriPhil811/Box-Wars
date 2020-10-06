@@ -16,6 +16,8 @@ namespace Box_Wars.Levels
 {
     public partial class Level_1 : UserControl
     {
+        #region variables
+
         //game music player and sound players
         WindowsMediaPlayer gameMusic = new WindowsMediaPlayer();
         SoundPlayer levelCompleteSound = new SoundPlayer(Properties.Resources.level_complete);
@@ -51,6 +53,10 @@ namespace Box_Wars.Levels
         Image stationaryEnemySprite;
         Image heroSprite;
 
+        #endregion variables
+
+        #region level on load
+
         public Level_1()
         {
             InitializeComponent();
@@ -60,10 +66,14 @@ namespace Box_Wars.Levels
 
             Cursor.Hide(); //hide the cursor
 
+            deathLabel.Text = "Deaths: " + Shadow.deathCount; //update the death counter
+
             //setup sprites
             stationaryEnemySprite = Properties.Resources.RedEnemy;
             heroSprite = Properties.Resources.Shadow;
         }
+
+        #endregion level on load
 
         #region level setup
 

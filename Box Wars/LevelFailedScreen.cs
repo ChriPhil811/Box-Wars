@@ -21,6 +21,8 @@ namespace Box_Wars
             gameOver.URL = "Shadow - Game Over.wav"; //set the file to play to the game over tune
 
             Cursor.Show(); //show the cursor
+
+            Shadow.deathCount++;
         }
 
         private void tryButton_Click(object sender, EventArgs e)

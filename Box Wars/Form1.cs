@@ -13,6 +13,7 @@ namespace Box_Wars
     public partial class Shadow : Form
     {
         public static int gameVolume = 100; //volume int for global use
+        public static int deathCount = 0; //death int for global use
 
         public Shadow()
         {
