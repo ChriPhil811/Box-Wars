@@ -19,6 +19,8 @@ namespace Box_Wars
         {
             InitializeComponent();
             winMusic.URL = "Shadow - Game Complete.wav"; //set the file to play to the menu theme
+
+            Cursor.Show(); //show the cursor
         }
 
         private void menuButton_Click(object sender, EventArgs e)

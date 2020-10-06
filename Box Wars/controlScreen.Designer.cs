@@ -36,6 +36,7 @@
             this.menuButton = new System.Windows.Forms.Button();
             this.tip1Label = new System.Windows.Forms.Label();
             this.controlsLabel2 = new System.Windows.Forms.Label();
+            this.controlLabel3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // controlsLabel
@@ -43,7 +44,7 @@
             this.controlsLabel.AutoSize = true;
             this.controlsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.controlsLabel.Location = new System.Drawing.Point(22, 48);
+            this.controlsLabel.Location = new System.Drawing.Point(22, 17);
             this.controlsLabel.Name = "controlsLabel";
             this.controlsLabel.Size = new System.Drawing.Size(327, 37);
             this.controlsLabel.TabIndex = 0;
@@ -120,16 +121,28 @@
             this.controlsLabel2.AutoSize = true;
             this.controlsLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.controlsLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.controlsLabel2.Location = new System.Drawing.Point(355, 48);
+            this.controlsLabel2.Location = new System.Drawing.Point(355, 17);
             this.controlsLabel2.Name = "controlsLabel2";
             this.controlsLabel2.Size = new System.Drawing.Size(425, 37);
             this.controlsLabel2.TabIndex = 7;
             this.controlsLabel2.Text = "Press M to mute the game.";
             // 
+            // controlLabel3
+            // 
+            this.controlLabel3.AutoSize = true;
+            this.controlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.controlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.controlLabel3.Location = new System.Drawing.Point(143, 54);
+            this.controlLabel3.Name = "controlLabel3";
+            this.controlLabel3.Size = new System.Drawing.Size(519, 37);
+            this.controlLabel3.TabIndex = 8;
+            this.controlLabel3.Text = "Press F to go fullscreen in-game.";
+            // 
             // controlScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Controls.Add(this.controlLabel3);
             this.Controls.Add(this.controlsLabel2);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.tip5Label);
@@ -155,5 +168,6 @@
         private System.Windows.Forms.Button menuButton;
         private System.Windows.Forms.Label tip1Label;
         private System.Windows.Forms.Label controlsLabel2;
+        private System.Windows.Forms.Label controlLabel3;
     }
 }

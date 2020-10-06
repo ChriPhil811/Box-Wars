@@ -58,6 +58,8 @@ namespace Box_Wars.Levels
             
             gameMusic.URL = "Shadow - Gameplay Theme.wav"; //set the file to play to the gameplay theme
 
+            Cursor.Hide(); //hide the cursor
+
             //setup sprites
             stationaryEnemySprite = Properties.Resources.RedEnemy;
             heroSprite = Properties.Resources.Shadow;

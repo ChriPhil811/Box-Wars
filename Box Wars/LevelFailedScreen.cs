@@ -19,6 +19,8 @@ namespace Box_Wars
         {
             InitializeComponent();
             gameOver.URL = "Shadow - Game Over.wav"; //set the file to play to the game over tune
+
+            Cursor.Show(); //show the cursor
         }
 
         private void tryButton_Click(object sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace Box_Wars
             f.Controls.Add(l1);
 
             l1.Location = new Point((f.Width - l1.Width) / 2, (f.Height - l1.Height) / 2); //center the screen
+            l1.Focus();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
